@@ -74,4 +74,19 @@ describe("Bank class tests", () => {
       // should expect the length of the array to increase by 1
     })
   });
+
+  describe('when calling withdraw', () => {
+    //* TEST 6
+    it('should decrease the accountBalance by the specified amount', () => {
+      // Arrange
+      const amount = 500;
+
+      // Act
+      testBank.withdraw(amount);
+      const result = testBank.getAccountBalance();
+
+      // Assert
+      expect(result).toBe(-500);
+    })
+  })
 });
