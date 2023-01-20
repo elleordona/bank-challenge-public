@@ -1,5 +1,8 @@
 // testing for bank class using jasmine
 
+// import Bank from src
+import Bank from "../src/bank.js";
+
 describe("Bank class tests", () => {
   describe("When creating an instance of Bank", () => {
     //* TEST 1
@@ -8,7 +11,7 @@ describe("Bank class tests", () => {
       const testBank = new Bank();
 
       // Act
-      result = testBank.getAccountBalance();
+      const result = testBank.getAccountBalance();
 
       // Assert
       expect(result).toBe(0);
