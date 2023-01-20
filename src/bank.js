@@ -19,7 +19,7 @@ export default class Bank {
 
     // functions
     deposit(amount) {
-        if (amount < 0) {
+        if (amount < 0 || isNaN(amount) === true) {
             throw new Error(`Invalid amount`)
         } else {
             this.#depositAmounts.push(amount);
@@ -28,7 +28,7 @@ export default class Bank {
     }
 
     withdraw(amount) {
-        if (amount < 0) {
+        if (amount < 0 || isNaN(amount) === true) {
             throw new Error(`Invalid amount`)
         } else {
             this.#withdrawAmounts.push(amount);

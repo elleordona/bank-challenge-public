@@ -86,7 +86,7 @@ describe("Bank class tests", () => {
     //* TEST 9
     it('should give an error if input is not a number', () => {
       // Arrange
-      const amount = '1000';
+      const amount = 'one thousand';
 
       // Assert
       expect(() => { testBank.deposit(amount) }).toThrowError('Invalid amount');
@@ -132,7 +132,7 @@ describe("Bank class tests", () => {
     //* TEST 9
     it('should give an error if input is not a number', () => {
       // Arrange
-      const amount = '500';
+      const amount = 'five hundred';
 
       // Assert
       expect(() => { testBank.withdraw(amount) }).toThrowError('Invalid amount');
