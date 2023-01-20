@@ -31,6 +31,8 @@ Initial Thoughts:
 
 **Test 4** - when `deposit` is called, length of `depositAmounts` should increase by 1
 
+---
+
 ## User Story - Part 2
 
 ```sh
@@ -59,6 +61,21 @@ Initial Thoughts:
 **Test 6** - `withdraw` will decrease the `accountBalance` by the specified amount
 
 **Test 7** - when `withdraw` is called, length of `withdrawAmounts` will increase by 1
+
+---
+
+## Edge Cases - Part 1 & 2
+
+Initial Thoughts:
+
+1. Can't deposit a negative amount or NaN
+2. Cant' withdraw a negative amount or NaN
+
+**Test 8** - `deposit` and `withdraw` will output error if negative amount is entered
+
+**Test 9** - `deposit` and `withdraw` will output error if NaN amount is entered
+
+---
 
 ## User Story - Part 3
 

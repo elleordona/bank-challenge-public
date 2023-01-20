@@ -73,6 +73,18 @@ describe("Bank class tests", () => {
       expect(result).toHaveSize(1);
       // should expect the length of the array to increase by 1
     })
+
+    //* TEST 8
+    it('should give an error if input is a negative value', () => {
+      // Arrange
+      const amount = -1000;
+
+      // Act
+      testBank.deposit(amount);
+
+      // Assert
+      expect(() => { testBank.deposit(amount) }).toThrowError('Invalid amount');
+    })
   });
 
   describe('when calling withdraw', () => {
@@ -100,6 +112,18 @@ describe("Bank class tests", () => {
 
       // Assert
       expect(result).toHaveSize(1);
+    })
+
+    //* TEST 8
+    it('should give an error if input is a negative value', () => {
+      // Arrange
+      const amount = -1000;
+
+      // Act
+      testBank.withdraw(amount);
+
+      // Assert
+      expect(() => { testBank.withdraw(amount) }).toThrowError('Invalid amount');
     })
   })
 });
