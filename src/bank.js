@@ -19,12 +19,20 @@ export default class Bank {
 
     // functions
     deposit(amount) {
-        this.#depositAmounts.push(amount);
-        this.#accountBalance += amount;
+        if (amount < 0) {
+            throw new Error(`Invalid amount`)
+        } else {
+            this.#depositAmounts.push(amount);
+            this.#accountBalance += amount;
+        }
     }
 
     withdraw(amount) {
-        this.#withdrawAmounts.push(amount);
-        this.#accountBalance -= amount;
+        if (amount < 0) {
+            throw new Error(`Invalid amount`)
+        } else {
+            this.#withdrawAmounts.push(amount);
+            this.#accountBalance -= amount;
+        }
     }
 }

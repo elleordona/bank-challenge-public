@@ -79,9 +79,6 @@ describe("Bank class tests", () => {
       // Arrange
       const amount = -1000;
 
-      // Act
-      testBank.deposit(amount);
-
       // Assert
       expect(() => { testBank.deposit(amount) }).toThrowError('Invalid amount');
     })
@@ -118,9 +115,6 @@ describe("Bank class tests", () => {
     it('should give an error if input is a negative value', () => {
       // Arrange
       const amount = -1000;
-
-      // Act
-      testBank.withdraw(amount);
 
       // Assert
       expect(() => { testBank.withdraw(amount) }).toThrowError('Invalid amount');
