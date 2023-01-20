@@ -1,0 +1,26 @@
+{
+  "name": "bank-challenge",
+  "version": "1.0.0",
+  "description": "bank challenge completed by elle ordona",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": { 
+    "test": "jasmine" 
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elleordona/bank-challenge.git"
+  },
+  "author": "elle ordona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elleordona/bank-challenge/issues"
+  },
+  "homepage": "https://github.com/elleordona/bank-challenge#readme",
+  "devDependencies": {
+    "jasmine": "^4.5.0"
+  }
+}

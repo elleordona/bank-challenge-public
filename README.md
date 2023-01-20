@@ -21,23 +21,24 @@ You'll work alone, and you'll also review your own code so you can practice refl
 **When** she prints her bank statement  
 **Then** she would see
 
-```
+```sh
 date       || credit  || debit  || balance
 14/01/2012 ||         || 500.00 || 2500.00
 13/01/2012 || 2000.00 ||        || 3000.00
 10/01/2012 || 1000.00 ||        || 1000.00
 ```
 
-
 #### Standard
-- [ ] Meets the spec
-- [ ] Developed test-first
-- [ ] Passes tests and code is clean and well formatted
-- [ ] Encapsulates adding and storing Transactions in a class
-- [ ] Encapsulates Statement formatting in a class
-- [ ] Encapsulates Transaction data in a class
+
+* [ ] Meets the spec
+* [ ] Developed test-first
+* [ ] Passes tests and code is clean and well formatted
+* [ ] Encapsulates adding and storing Transactions in a class
+* [ ] Encapsulates Statement formatting in a class
+* [ ] Encapsulates Transaction data in a class
 
 #### Extended
-- [ ] Can you format the console output?  Credited values should be GREEN and debited values should be RED.  The balance should be GREEN if positive and RED if negative
+
+* [ ] Can you format the console output?  Credited values should be GREEN and debited values should be RED.  The balance should be GREEN if positive and RED if negative
 
 You may find this link useful [Output to the command line using NodeJS](https://nodejs.dev/en/learn/output-to-the-command-line-using-nodejs/) - check the formatting section (and this links out to a GitHub doc on the [ANSI color codes](https://gist.github.com/iamnewton/8754917))
