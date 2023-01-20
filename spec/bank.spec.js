@@ -26,6 +26,15 @@ describe("Bank class tests", () => {
       // Assert
       expect(result).toBe(0);
     });
+
+    //? SUB TEST 1
+    it('should create an empty array for depositAmounts', () => {
+      // Act
+      const result = testBank.getDepositAmounts();
+
+      // Assert
+      expect(result).toHaveSize(0);
+    });
   });
 
   describe("when calling deposit", () => {
@@ -49,10 +58,10 @@ describe("Bank class tests", () => {
 
       // Act
       testBank.deposit(amount);
-      const result = testBank.depositAmount.length; // should expect the length of the array to increase by 1
+      const result = testBank.getDepositAmounts(); // should expect the length of the array to increase by 1
 
       // Assert
-      expect(result).toBe(1);
+      expect(result).toHaveSize(1);
     })
   });
 });

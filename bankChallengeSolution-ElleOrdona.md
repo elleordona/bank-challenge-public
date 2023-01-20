@@ -27,7 +27,9 @@ Initial Thoughts:
 
 **Test 2** - `deposit` will increase the `accountBalance` by the specified amount
 
-**Test 3** - when `deposit` is called, length of `depositAmounts` should increase by 1
+**Test 3** - when `Bank` is created `depositAmounts` should be empty
+
+**Test 4** - when `deposit` is called, length of `depositAmounts` should increase by 1
 
 ## User Story - Part 2
 
