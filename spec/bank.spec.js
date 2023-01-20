@@ -41,5 +41,18 @@ describe("Bank class tests", () => {
       // Assert
       expect(result).toBe(1000);
     });
+
+    //* TEST 3
+    it("should increase the length of depositedAmounts by 1", () => {
+      // Arrange
+      const amount = 1000;
+
+      // Act
+      testBank.deposit(amount);
+      const result = testBank.depositAmount.length; // should expect the length of the array to increase by 1
+
+      // Assert
+      expect(result).toBe(1);
+    })
   });
 });
