@@ -19,8 +19,8 @@ export default class Bank {
 
     // functions
     deposit(amount) {
-        if (amount < 0 || typeof amount != 'number') {
-            throw new Error(`Invalid amount`)
+        if (amount < 0 || typeof amount != "number") {
+            throw new Error(`Invalid amount`);
         } else {
             this.#depositAmounts.push(amount);
             this.#accountBalance += amount;
@@ -28,8 +28,8 @@ export default class Bank {
     }
 
     withdraw(amount) {
-        if (amount < 0 || typeof amount != 'number') {
-            throw new Error(`Invalid amount`)
+        if (amount < 0 || typeof amount != "number") {
+            throw new Error(`Invalid amount`);
         } else {
             this.#withdrawAmounts.push(amount);
             this.#accountBalance -= amount;

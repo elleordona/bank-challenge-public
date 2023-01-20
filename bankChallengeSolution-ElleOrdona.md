@@ -81,7 +81,7 @@ Initial Thoughts:
 
 ```sh
 As a customer
-I want to see the data of any transactions made
+I want to add the date of any transactions made
 So I can keep track of my bank account activity
 ```
 

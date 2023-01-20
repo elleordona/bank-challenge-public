@@ -28,7 +28,7 @@ describe("Bank class tests", () => {
     });
 
     //* TEST 3
-    it('should create an empty array for depositAmounts', () => {
+    it("should create an empty array for depositAmounts", () => {
       // Act
       const result = testBank.getDepositAmounts();
 
@@ -37,13 +37,13 @@ describe("Bank class tests", () => {
     });
 
     //* TEST 5
-    it('should create an empty array for withdrawAmounts', () => {
+    it("should create an empty array for withdrawAmounts", () => {
       // Act
       const result = testBank.getWithdrawAmounts();
 
       // Assert
       expect(result).toHaveSize(0);
-    })
+    });
   });
 
   describe("when calling deposit", () => {
@@ -72,30 +72,34 @@ describe("Bank class tests", () => {
       // Assert
       expect(result).toHaveSize(1);
       // should expect the length of the array to increase by 1
-    })
+    });
 
     //* TEST 8
-    it('should give an error if input is a negative value', () => {
+    it("should give an error if input is a negative value", () => {
       // Arrange
       const amount = -1000;
 
       // Assert
-      expect(() => { testBank.deposit(amount) }).toThrowError('Invalid amount');
-    })
+      expect(() => {
+        testBank.deposit(amount);
+      }).toThrowError("Invalid amount");
+    });
 
     //* TEST 9
-    it('should give an error if input is not a number', () => {
+    it("should give an error if input is not a number", () => {
       // Arrange
-      const amount = 'one thousand';
+      const amount = "one thousand";
 
       // Assert
-      expect(() => { testBank.deposit(amount) }).toThrowError('Invalid amount');
-    })
+      expect(() => {
+        testBank.deposit(amount);
+      }).toThrowError("Invalid amount");
+    });
   });
 
-  describe('when calling withdraw', () => {
+  describe("when calling withdraw", () => {
     //* TEST 6
-    it('should decrease the accountBalance by the specified amount', () => {
+    it("should decrease the accountBalance by the specified amount", () => {
       // Arrange
       const amount = 500;
 
@@ -105,10 +109,10 @@ describe("Bank class tests", () => {
 
       // Assert
       expect(result).toBe(-500);
-    })
+    });
 
     //* TEST 7
-    it('should increase the length of withdrawAmounts by 1', () => {
+    it("should increase the length of withdrawAmounts by 1", () => {
       // Arrange
       const amount = 500;
 
@@ -118,24 +122,28 @@ describe("Bank class tests", () => {
 
       // Assert
       expect(result).toHaveSize(1);
-    })
+    });
 
     //* TEST 8
-    it('should give an error if input is a negative value', () => {
+    it("should give an error if input is a negative value", () => {
       // Arrange
       const amount = -500;
 
       // Assert
-      expect(() => { testBank.withdraw(amount) }).toThrowError('Invalid amount');
-    })
+      expect(() => {
+        testBank.withdraw(amount);
+      }).toThrowError("Invalid amount");
+    });
 
     //* TEST 9
-    it('should give an error if input is not a number', () => {
+    it("should give an error if input is not a number", () => {
       // Arrange
       const amount = null;
 
       // Assert
-      expect(() => { testBank.withdraw(amount) }).toThrowError('Invalid amount');
-    })
-  })
+      expect(() => {
+        testBank.withdraw(amount);
+      }).toThrowError("Invalid amount");
+    });
+  });
 });
