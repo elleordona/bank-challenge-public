@@ -132,7 +132,7 @@ describe("Bank class tests", () => {
     //* TEST 9
     it('should give an error if input is not a number', () => {
       // Arrange
-      const amount = 'five hundred';
+      const amount = null;
 
       // Assert
       expect(() => { testBank.withdraw(amount) }).toThrowError('Invalid amount');
