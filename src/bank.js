@@ -24,6 +24,7 @@ export default class Bank {
     }
 
     withdraw(amount) {
+        this.#withdrawAmounts.push(amount);
         this.#accountBalance -= amount;
     }
 }
