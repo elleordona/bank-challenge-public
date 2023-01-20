@@ -88,5 +88,18 @@ describe("Bank class tests", () => {
       // Assert
       expect(result).toBe(-500);
     })
+
+    //* TEST 7
+    it('should increase the length of withdrawAmounts by 1', () => {
+      // Arrange
+      const amount = 500;
+
+      // Act
+      testBank.withdraw(amount);
+      const result = testBank.getWithdrawAmounts();
+
+      // Assert
+      expect(result).toHaveSize(1);
+    })
   })
 });
