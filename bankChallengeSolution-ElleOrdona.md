@@ -41,17 +41,24 @@ So that I can spend it
 
 ## Domain Model - Part 2
 
-| Objects | Properties              | Messages           | Output  |
-| ------- | ----------------------- | ------------------ | ------- |
-| Bank    | accountBalance @Integer | withdraw(@Integer) | @String |
+| Objects | Properties                        | Messages           | Output  |
+| ------- | --------------------------------- | ------------------ | ------- |
+| Bank    | accountBalance @Integer           | withdraw(@Integer) | @String |
+|         | withdrawAmounts @Array[@withdraw] |                    |         |
 
 ## Tests - Part 2
 
 Initial Thoughts:
 
-1. `withdraw` will decrease the `accountBalance` by the specified amount
+1. when `Bank` is created an empty array `withdrawAmounts` should be created
+2. `withdraw` will decrease the `accountBalance` by the specified amount
+3. the `amount` withdrawn will be added to `withdrawAmounts`
 
-**Test 2** - `withdraw` will decrease the `accountBalance` by the specified amount
+**Test 5** - when `Bank` is created `withdrawAmounts` should be empty
+
+**Test 6** - `withdraw` will decrease the `accountBalance` by the specified amount
+
+**Test 7** - when `withdraw` is called, length of `withdrawAmounts` will increase by 1
 
 ## User Story - Part 3
 
