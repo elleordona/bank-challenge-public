@@ -2,6 +2,7 @@ export default class Bank {
     // properties
     #accountBalance = 0;
     #depositAmounts = [];
+    #withdrawAmounts = [];
 
     // getters
     getAccountBalance() {
@@ -10,6 +11,10 @@ export default class Bank {
 
     getDepositAmounts() {
         return this.#depositAmounts;
+    }
+
+    getWithdrawAmounts() {
+        return this.#withdrawAmounts;
     }
 
     // functions
