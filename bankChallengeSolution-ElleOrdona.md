@@ -10,9 +10,10 @@ So that I can add money to my bank balance
 
 ## Domain Model - Part 1
 
-| Objects | Properties              | Messages          | Output  |
-| ------- | ----------------------- | ----------------- | ------- |
-| Bank    | accountBalance @Integer | deposit(@Integer) | @String |
+| Objects      | Properties              | Messages          | Output  |
+| ------------ | ----------------------- | ----------------- | ------- |
+| Bank         | accountBalance @Integer | deposit(@Integer) | @String |
+| Transactions | transactions @Array[@]  |
 
 ## Tests - Part 1
 
@@ -20,10 +21,13 @@ Initial Thoughts:
 
 1. Need a `Bank` class that holds the money
 2. `deposit` will add the input amount to the `accountBalance` in the `Bank`
+3. The `amount` that is deposited should be saved
 
 **Test 1** - when `Bank` is created `accountBalance` is set to 0
 
-**Test 1** - `deposit` will increase the `accountBalance` by the specified amount
+**Test 2** - `deposit` will increase the `accountBalance` by the specified amount
+
+**Test 3** - the `amount` that is deposited should be stored in an array
 
 ## User Story - Part 2
 
