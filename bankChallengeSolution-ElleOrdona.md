@@ -30,7 +30,7 @@ Initial Thoughts:
 
 **Test 3** - `Deposit` will change `credit` through constructor
 
-**Test 4** - `deposit()` will call `getAmount()` from within an object
+**Test 4** - `deposit()` will call `getCredit()` from within an object
 
 **Test 5** - `deposit()` will add the `credit` amount to the `runningBalance`
 

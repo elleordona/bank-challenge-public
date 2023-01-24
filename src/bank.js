@@ -11,6 +11,11 @@ export default class Bank {
 	getTransactions() {
 		return this.#transactions;
 	}
+
+	// methods
+	deposit(input) {
+		input.getCredit();
+	}
 }
 
 // export default class Bank {

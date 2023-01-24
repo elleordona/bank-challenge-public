@@ -31,17 +31,31 @@ describe('Testing Bank Class', () => {
 	});
 
 	describe('when calling deposit', () => {
+		//* TEST 4
 		it('should call getAmount from within an object', () => {
 			// Arrange
 			const testBank = new Bank();
-			const dummyDeposit = { getAmount: () => {} }; // dummy deposit
-			const depositSpy = spyOn(dummyDeposit, 'getAmount'); // spy to keep an eye on getAmount within dummyDeposit
+			const dummyDeposit = { getCredit: () => {} }; // dummy deposit
+			const depositSpy = spyOn(dummyDeposit, 'getCredit'); // spy to keep an eye on getAmount within dummyDeposit
 
 			// Act
 			testBank.deposit(dummyDeposit);
 
 			// Assert
 			expect(depositSpy).toHaveBeenCalled();
+		});
+
+		//* TEST 5
+		it('should add the credit to the runningBalance', () => {
+			// Arrange
+			const testBank = new Bank();
+			const dummyDeposit = { getCredit: () => 1000 }; // credit set to 1000
+
+			// Act
+			const result = testBank.getRunningBalance();
+
+			// Assert
+			expect(result).toBe(1000);
 		});
 	});
 });
