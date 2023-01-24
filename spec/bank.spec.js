@@ -30,9 +30,9 @@ describe('Testing Bank Class', () => {
 		});
 	});
 
-	describe('when calling deposit', () => {
+	describe('when calling deposit()', () => {
 		//* TEST 4
-		it('should call getAmount from within an object', () => {
+		it('should call getCredit from within an object', () => {
 			// Arrange
 			const testBank = new Bank();
 			const dummyDeposit = { getCredit: () => {} }; // dummy deposit
@@ -70,6 +70,22 @@ describe('Testing Bank Class', () => {
 
 			// Assert
 			expect(testBank.getTransactions()).toHaveSize(1); // cannot look at the contents of the array as it requires logic in the dummyDeposit but size should only increase to 1 even though they are multiple elements within the input
+		});
+	});
+
+	describe('when calling withdraw()', () => {
+		//* TEST 8
+		it('should call getDebit from within an object', () => {
+			// Arrange
+			const testBank = new Bank();
+			const dummyWithdraw = { getDebit: () => {} };
+			const withdrawSpy = spyOn(dummyWithdraw, 'getDebit');
+
+			// Act
+			testBank.withdraw(dummyWithdraw);
+
+			// Assert
+			expect(withdrawSpy).toHaveBeenCalled();
 		});
 	});
 });
