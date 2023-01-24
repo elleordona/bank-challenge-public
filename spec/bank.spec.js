@@ -11,7 +11,7 @@ describe('Testing Bank Class', () => {
 			const testBank = new Bank(); // create instance of Bank
 
 			// Act
-			const result = testBank.getRunningBalance(); // getter as runningBalance is private
+			const result = testBank.getRunningBalance(); // using getter as runningBalance is private
 
 			// Assert
 			expect(result).toBe(0);

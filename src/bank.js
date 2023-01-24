@@ -1,4 +1,12 @@
-export default class Bank {}
+export default class Bank {
+	// properties
+	#runningBalance = 0;
+
+	//getters
+	getRunningBalance() {
+		return this.#runningBalance;
+	}
+}
 
 // export default class Bank {
 // 	// properties
