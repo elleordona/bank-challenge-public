@@ -1,10 +1,15 @@
 export default class Bank {
 	// properties
 	#runningBalance = 0;
+	#transactions = [];
 
 	//getters
 	getRunningBalance() {
 		return this.#runningBalance;
+	}
+
+	getTransactions() {
+		return this.#transactions;
 	}
 }
 

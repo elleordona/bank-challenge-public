@@ -13,8 +13,8 @@ So that I can add money to my bank balance
 | Objects | Properties                    | Messages          | Output |
 | ------- | ----------------------------- | ----------------- | ------ |
 | Bank    | runningBalance @Integer       | deposit(@Deposit) | @Void  |
-|         | transactions @Array[@deposit] |                   |        |
-| Deposit | credit @Integer               | getAmount()       | @Void  |
+|         | transactions @Array[@Deposit] |                   |        |
+| Deposit | credit @Integer               | getCredit()       | @Void  |
 
 ## Tests - Part 1
 
@@ -28,7 +28,15 @@ Initial Thoughts:
 
 **Test 2** - when an instance of `Bank` is created `transactions` is an empty array;
 
-**Test 3** -
+**Test 3** - `Deposit` will change `credit` through constructor
+
+**Test 4** - `getCredit()` will return the value assigned to `credit`
+
+**Test 5** - `deposit()` will call `getAmount()` from within an object
+
+**Test 6** - `deposit()` will add the `credit` amount to the `runningBalance`
+
+**Test 7** - `deposit()` will add the `credit` and `runningBalance` into `transactions`
 
 ---
 
