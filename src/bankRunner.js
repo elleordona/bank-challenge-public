@@ -1,6 +1,6 @@
 // showing function of Bank
 
-import Bank from "./bank.js";
+import Bank from './bank.js';
 
 const myBank = new Bank();
 
