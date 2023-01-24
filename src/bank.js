@@ -14,46 +14,8 @@ export default class Bank {
 
 	// methods
 	deposit(input) {
-		this.input = input;
 		this.#runningBalance += input.getCredit(); // add credit to runningBalance
+		input.balance = this.#runningBalance; // add a balance property to the input (object)
+		this.#transactions.push(input); // add input (object) into transactions array
 	}
 }
-
-// export default class Bank {
-// 	// properties
-// 	#accountBalance = 0;
-// 	#depositAmounts = [];
-// 	#withdrawAmounts = [];
-
-// 	// getters
-// 	getAccountBalance() {
-// 		return this.#accountBalance;
-// 	}
-
-// 	getDepositAmounts() {
-// 		return this.#depositAmounts;
-// 	}
-
-// 	getWithdrawAmounts() {
-// 		return this.#withdrawAmounts;
-// 	}
-
-// 	// functions
-// 	deposit(amount) {
-// 		if (amount < 0 || typeof amount != 'number') {
-// 			throw new Error(`Invalid amount`);
-// 		} else {
-// 			this.#depositAmounts.push(amount);
-// 			this.#accountBalance += amount;
-// 		}
-// 	}
-
-// 	withdraw(amount) {
-// 		if (amount < 0 || typeof amount != 'number') {
-// 			throw new Error(`Invalid amount`);
-// 		} else {
-// 			this.#withdrawAmounts.push(amount);
-// 			this.#accountBalance -= amount;
-// 		}
-// 	}
-// }

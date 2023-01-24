@@ -69,7 +69,7 @@ describe('Testing Bank Class', () => {
 			testBank.deposit(dummyDeposit);
 
 			// Assert
-			expect(testBank.getTransactions()).toEqual([{ credit: 1000, balance: 1000 }]);
+			expect(testBank.getTransactions()).toHaveSize(1); // cannot look at the contents of the array as it requires logic in the dummyDeposit but size should only increase to 1 even though they are multiple elements within the input
 		});
 	});
 });

@@ -48,12 +48,25 @@ So that I can spend it
 
 ## Domain Model - Part 2
 
-| Objects | Properties                        | Messages           | Output  |
-| ------- | --------------------------------- | ------------------ | ------- |
-| Bank    | accountBalance @Integer           | withdraw(@Integer) | @String |
-|         | withdrawAmounts @Array[@withdraw] |                    |         |
+| Objects  | Properties                     | Messages            | Output |
+| -------- | ------------------------------ | ------------------- | ------ |
+| Bank     | runningBalance @Integer        | withdraw(@Withdraw) | @Void  |
+|          | transactions @Array[@Withdraw] |                     |        |
+| Withdraw | debit @Integer                 | getDebit()          | @Void  |
 
 ## Tests - Part 2
+
+Initial Thoughts:
+
+1. same as `Deposit` but instead will take away from `runningBalance`
+
+**Test 7** - `Withdraw` will change `debit` through constructor
+
+**Test 8** - `withdraw()` will call `getDebit()` from within an object
+
+**Test 9** - `withdraw()` will take away the `debit` amount from the `runningBalance`
+
+**Test 10** - `withdraw()` will add the `debit` and `runningBalance` into `transactions`
 
 ---
 
@@ -67,13 +80,8 @@ So I can keep track of my bank account activity
 
 ## Domain Model - Part 3
 
-| Objects | Properties                      | Messages                 | Output  |
-| ------- | ------------------------------- | ------------------------ | ------- |
-| Bank    | accountBalance @Integer         | deposit(@amount, @date)  | @String |
-|         | depositAmounts @Array[@amount]  | withdraw(@amount, @date) | @String |
-|         | withdrawAmounts @Array[@amount] |                          |         |
-|         | depositDate @Array[@date]       |                          |         |
-|         | withdrawDate @Array[@date]      |                          |         |
+| Objects | Properties | Messages | Output |
+| ------- | ---------- | -------- | ------ |
 
 ## Tests - Part 3
 
