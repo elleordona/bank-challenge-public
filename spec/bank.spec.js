@@ -100,5 +100,18 @@ describe('Testing Bank Class', () => {
 			// Assert
 			expect(testBank.getRunningBalance()).toBe(-500);
 		});
+
+		//* TEST 10
+		it('should debit and runningBalance into transactions', () => {
+			// Arrange
+			const testBank = new Bank();
+			const dummyWithdraw = { getDebit: () => 500 };
+
+			// Act
+			testBank.withdraw(dummyWithdraw);
+
+			// Assert
+			expect(testBank.getTransactions()).toHaveSize(1);
+		});
 	});
 });

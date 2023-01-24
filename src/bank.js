@@ -20,6 +20,6 @@ export default class Bank {
 	}
 
 	withdraw(input) {
-		input.getDebit();
+		this.#runningBalance -= input.getDebit(); // take away debit from runningBalance
 	}
 }
