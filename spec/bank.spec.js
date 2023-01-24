@@ -87,5 +87,18 @@ describe('Testing Bank Class', () => {
 			// Assert
 			expect(withdrawSpy).toHaveBeenCalled();
 		});
+
+		//* TEST 9
+		it('should take away debit from the runningBalance', () => {
+			// Arrange
+			const testBank = new Bank();
+			const dummyWithdraw = { getDebit: () => 500 };
+
+			// Act
+			testBank.withdraw(dummyWithdraw);
+
+			// Assert
+			expect(testBank.getRunningBalance()).toBe(-500);
+		});
 	});
 });

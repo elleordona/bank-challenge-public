@@ -18,4 +18,8 @@ export default class Bank {
 		input.balance = this.#runningBalance; // add a balance property to the input (object)
 		this.#transactions.push(input); // add input (object) into transactions array
 	}
+
+	withdraw(input) {
+		input.getDebit();
+	}
 }
