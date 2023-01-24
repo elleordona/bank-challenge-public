@@ -1,38 +1,40 @@
-export default class Bank {
-	// properties
-	#accountBalance = 0;
-	#depositAmounts = [];
-	#withdrawAmounts = [];
+export default class Bank {}
 
-	// getters
-	getAccountBalance() {
-		return this.#accountBalance;
-	}
+// export default class Bank {
+// 	// properties
+// 	#accountBalance = 0;
+// 	#depositAmounts = [];
+// 	#withdrawAmounts = [];
 
-	getDepositAmounts() {
-		return this.#depositAmounts;
-	}
+// 	// getters
+// 	getAccountBalance() {
+// 		return this.#accountBalance;
+// 	}
 
-	getWithdrawAmounts() {
-		return this.#withdrawAmounts;
-	}
+// 	getDepositAmounts() {
+// 		return this.#depositAmounts;
+// 	}
 
-	// functions
-	deposit(amount) {
-		if (amount < 0 || typeof amount != 'number') {
-			throw new Error(`Invalid amount`);
-		} else {
-			this.#depositAmounts.push(amount);
-			this.#accountBalance += amount;
-		}
-	}
+// 	getWithdrawAmounts() {
+// 		return this.#withdrawAmounts;
+// 	}
 
-	withdraw(amount) {
-		if (amount < 0 || typeof amount != 'number') {
-			throw new Error(`Invalid amount`);
-		} else {
-			this.#withdrawAmounts.push(amount);
-			this.#accountBalance -= amount;
-		}
-	}
-}
+// 	// functions
+// 	deposit(amount) {
+// 		if (amount < 0 || typeof amount != 'number') {
+// 			throw new Error(`Invalid amount`);
+// 		} else {
+// 			this.#depositAmounts.push(amount);
+// 			this.#accountBalance += amount;
+// 		}
+// 	}
+
+// 	withdraw(amount) {
+// 		if (amount < 0 || typeof amount != 'number') {
+// 			throw new Error(`Invalid amount`);
+// 		} else {
+// 			this.#withdrawAmounts.push(amount);
+// 			this.#accountBalance -= amount;
+// 		}
+// 	}
+// }
