@@ -16,5 +16,17 @@ describe('Testing Bank Class', () => {
 			// Assert
 			expect(result).toBe(0);
 		});
+
+		//* TEST 2
+		it('should have a empty array called transactions', () => {
+			// Arrange
+			const testBank = new Bank();
+
+			// Act
+			const result = testBank.getTransactions(); // using a getter as transactions is private
+
+			// Assert
+			expect(result).toHaveSize(0);
+		});
 	});
 });
