@@ -29,4 +29,19 @@ describe('Testing Bank Class', () => {
 			expect(result).toHaveSize(0);
 		});
 	});
+
+	describe('when calling deposit', () => {
+		it('should call getAmount from within an object', () => {
+			// Arrange
+			const testBank = new Bank();
+			const dummyDeposit = { getAmount: () => {} }; // dummy deposit
+			const depositSpy = spyOn(dummyDeposit, 'getAmount'); // spy to keep an eye on getAmount within dummyDeposit
+
+			// Act
+			testBank.deposit(dummyDeposit);
+
+			// Assert
+			expect(depositSpy).toHaveBeenCalled();
+		});
+	});
 });
