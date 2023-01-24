@@ -14,7 +14,8 @@ export default class Bank {
 
 	// methods
 	deposit(input) {
-		input.getCredit();
+		this.input = input;
+		this.#runningBalance += input.getCredit(); // add credit to runningBalance
 	}
 }
 

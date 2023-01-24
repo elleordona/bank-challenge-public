@@ -52,10 +52,24 @@ describe('Testing Bank Class', () => {
 			const dummyDeposit = { getCredit: () => 1000 }; // credit set to 1000
 
 			// Act
+			testBank.deposit(dummyDeposit);
 			const result = testBank.getRunningBalance();
 
 			// Assert
 			expect(result).toBe(1000);
+		});
+
+		//* TEST 6
+		it('should add credit and runningBalance into transactions array', () => {
+			// Arrange
+			const testBank = new Bank();
+			const dummyDeposit = { getCredit: () => 1000 };
+
+			// Act
+			testBank.deposit(dummyDeposit);
+
+			// Assert
+			expect(testBank.getTransactions()).toEqual([{ credit: 1000, balance: 1000 }]);
 		});
 	});
 });
