@@ -4,7 +4,12 @@ export default class Withdraw {
 
 	// constructor
 	constructor(debit) {
-		this.#debit = debit;
+		if (typeof debit != 'number' || debit < 0) {
+			console.log('Input Invalid. Debit set to 0');
+			this.#debit = 0;
+		} else {
+			this.#debit = debit;
+		}
 	}
 
 	// methods
