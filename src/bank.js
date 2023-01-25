@@ -21,5 +21,7 @@ export default class Bank {
 
 	withdraw(input) {
 		this.#runningBalance -= input.getDebit(); // take away debit from runningBalance
+		input.balance = this.#runningBalance; // add a balance property to the input (object)
+		this.#transactions.push(input); // add input (object) into transactions array
 	}
 }

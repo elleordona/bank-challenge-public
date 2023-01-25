@@ -17,4 +17,18 @@ describe('Testing Deposit Class', () => {
 			expect(result).toBe(1000);
 		});
 	});
+
+	describe('Edge Cases', () => {
+		describe('when assigning credit', () => {
+			//* TEST 11
+			it('should only allow positive numbers', () => {
+				// Arrange
+				const input = -1000;
+				const testDeposit = new Deposit(input);
+
+				// Assert
+				expect(testDeposit.getCredit()).toBe(0);
+			});
+		});
+	});
 });

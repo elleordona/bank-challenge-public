@@ -70,6 +70,16 @@ Initial Thoughts:
 
 ---
 
+## Edge Cases - Part 1&2
+
+Initial Thoughts:
+
+1. `credit` and `debit` can only be positive numbers
+
+**Test 11** - `credit` and `debit` can only be positive
+
+---
+
 ## User Story - Part 3
 
 ```sh
