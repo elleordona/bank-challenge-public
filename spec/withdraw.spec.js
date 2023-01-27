@@ -28,6 +28,19 @@ describe('Testing the Withdraw Class', () => {
 			//
 			expect(result).toBe('');
 		});
+
+		//* TEST 13
+		it('should allow the user to set the date', () => {
+			// Arrange
+			const date = '10-01-2012';
+			const testWithdraw = new Withdraw(500, date);
+
+			// Act
+			const result = testWithdraw.getDate();
+
+			// Assert
+			expect(result).toBe('10-01-2012');
+		});
 	});
 
 	describe('Edge Cases', () => {

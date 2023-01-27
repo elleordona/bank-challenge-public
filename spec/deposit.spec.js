@@ -28,6 +28,19 @@ describe('Testing Deposit Class', () => {
 			// Arrange
 			expect(result).toBe(''); // if no input then it should default to empty string
 		});
+
+		//* TEST 13
+		it('should allow the user to set the date', () => {
+			// Arrange
+			const date = '10-01-2012';
+			const testDeposit = new Deposit(1000, date);
+
+			// Act
+			const result = testDeposit.getDate();
+
+			// Assert
+			expect(result).toBe('10-01-2012');
+		});
 	});
 
 	describe('Edge Cases', () => {
