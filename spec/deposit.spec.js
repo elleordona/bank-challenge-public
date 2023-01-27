@@ -16,6 +16,18 @@ describe('Testing Deposit Class', () => {
 			// Assert
 			expect(result).toBe(1000);
 		});
+
+		//* TEST 12
+		it('should default date to an empty string', () => {
+			// Arrange
+			const testDeposit = new Deposit(1000);
+
+			// Act
+			const result = testDeposit.getDate();
+
+			// Arrange
+			expect(result).toBe(''); // if no input then it should default to empty string
+		});
 	});
 
 	describe('Edge Cases', () => {

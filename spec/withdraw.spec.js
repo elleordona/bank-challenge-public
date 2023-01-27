@@ -16,6 +16,18 @@ describe('Testing the Withdraw Class', () => {
 			// Assert
 			expect(result).toBe(500);
 		});
+
+		//* TEST 12
+		it('should default date to an empty string', () => {
+			// Arrange
+			const testWithdraw = new Withdraw(500);
+
+			// Act
+			const result = testWithdraw.getDate();
+
+			//
+			expect(result).toBe('');
+		});
 	});
 
 	describe('Edge Cases', () => {

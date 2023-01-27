@@ -13,7 +13,7 @@ So that I can add money to my bank balance
 | Objects | Properties                    | Messages          | Output |
 | ------- | ----------------------------- | ----------------- | ------ |
 | Bank    | runningBalance @Integer       | deposit(@Deposit) | @Void  |
-|         | transactions @Array[@Deposit] |                   |        |
+|         | transactions @Array[@deposit] |                   |        |
 | Deposit | credit @Integer               | getCredit()       | @Void  |
 
 ## Tests - Part 1
@@ -51,7 +51,7 @@ So that I can spend it
 | Objects  | Properties                     | Messages            | Output |
 | -------- | ------------------------------ | ------------------- | ------ |
 | Bank     | runningBalance @Integer        | withdraw(@Withdraw) | @Void  |
-|          | transactions @Array[@Withdraw] |                     |        |
+|          | transactions @Array[@withdraw] |                     |        |
 | Withdraw | debit @Integer                 | getDebit()          | @Void  |
 
 ## Tests - Part 2
@@ -90,12 +90,28 @@ So I can keep track of my bank account activity
 
 ## Domain Model - Part 3
 
-| Objects | Properties | Messages | Output |
-| ------- | ---------- | -------- | ------ |
+| Objects  | Properties                               | Messages                   | Output |
+| -------- | ---------------------------------------- | -------------------------- | ------ |
+| Bank     | runningBalance @Integer                  | deposit(@Deposit, @Date)   | @Void  |
+|          | transactions @Array[@deposit, @withdraw] | withdraw(@Withdraw, @Date) |        |
+| Deposit  | credit @Integer                          | getCredit()                | @Void  |
+|          | date @String                             |                            |        |
+| Withdraw | debit @Integer                           | getDebit()                 | @Void  |
+|          | date @String                             |                            |        |
 
 ## Tests - Part 3
 
 Initial Thoughts:
+
+1. `date` is second input of `deposit` and `withdraw`
+2. `date` is a property of `Deposit` and `Withdraw`
+3. need to format the `date` string input so it can be used in `Date` object
+
+**Test 12** - default value of `date` is empty string in `Withdraw` and `Deposit`
+
+**Test 13** - `date` can be changed using the constructor
+
+**Test 14** - `date` gets formatted into the integrated `Date` class
 
 ## User Story - Part 4
 
