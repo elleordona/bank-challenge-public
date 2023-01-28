@@ -10,7 +10,7 @@ export default class Withdraw {
 			console.log('Input Invalid. Debit set to 0');
 			this.#debit = 0;
 		} else {
-			this.#debit = debit;
+			this.#debit = debit.toFixed(2);
 		}
 		this.#dateString = dateString.replace(/-/g, '/');
 		const splitDate = dateString.split('-');

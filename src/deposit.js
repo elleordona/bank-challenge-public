@@ -10,7 +10,7 @@ export default class Deposit {
 			console.log('Input Invalid. Credit set to 0');
 			this.#credit = 0;
 		} else {
-			this.#credit = credit;
+			this.#credit = credit.toFixed(2);
 		}
 		this.#dateString = dateString.replace(/-/g, '/');
 		const splitDate = dateString.split('-');
