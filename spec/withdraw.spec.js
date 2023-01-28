@@ -23,7 +23,7 @@ describe('Testing the Withdraw Class', () => {
 			const testWithdraw = new Withdraw(500);
 
 			// Act
-			const result = testWithdraw.getDate();
+			const result = testWithdraw.getDateString();
 
 			//
 			expect(result).toBe('');
@@ -32,14 +32,27 @@ describe('Testing the Withdraw Class', () => {
 		//* TEST 13
 		it('should allow the user to set the date', () => {
 			// Arrange
-			const date = '10-01-2012';
-			const testWithdraw = new Withdraw(500, date);
+			const dateString = '10-01-2012';
+			const testWithdraw = new Withdraw(500, dateString);
+
+			// Act
+			const result = testWithdraw.getDateString();
+
+			// Assert
+			expect(result).toBe('10/01/2012');
+		});
+
+		//* TEST 14
+		it('should create date into an instance of Date', () => {
+			// Arrange
+			const dateString = '10-01-2012';
+			const testWithdraw = new Withdraw(500, dateString);
 
 			// Act
 			const result = testWithdraw.getDate();
 
 			// Assert
-			expect(result).toBe('10-01-2012');
+			expect(result).toBeInstanceOf(Date);
 		});
 	});
 

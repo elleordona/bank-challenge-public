@@ -23,7 +23,7 @@ describe('Testing Deposit Class', () => {
 			const testDeposit = new Deposit(1000);
 
 			// Act
-			const result = testDeposit.getDate();
+			const result = testDeposit.getDateString();
 
 			// Arrange
 			expect(result).toBe(''); // if no input then it should default to empty string
@@ -32,14 +32,27 @@ describe('Testing Deposit Class', () => {
 		//* TEST 13
 		it('should allow the user to set the date', () => {
 			// Arrange
-			const date = '10-01-2012';
-			const testDeposit = new Deposit(1000, date);
+			const dateString = '10-01-2012';
+			const testDeposit = new Deposit(1000, dateString);
+
+			// Act
+			const result = testDeposit.getDateString();
+
+			// Assert
+			expect(result).toBe('10/01/2012');
+		});
+
+		//* TEST 14
+		it('should create date into a instance of Date', () => {
+			// Arrange
+			const dateString = '10-01-2012';
+			const testDeposit = new Deposit(500, dateString);
 
 			// Act
 			const result = testDeposit.getDate();
 
 			// Assert
-			expect(result).toBe('10-01-2012');
+			expect(result).toBeInstanceOf(Date);
 		});
 	});
 

@@ -105,7 +105,7 @@ Initial Thoughts:
 
 1. `date` is second input of `deposit` and `withdraw`
 2. `date` is a property of `Deposit` and `Withdraw`
-3. need to format the `date` string input so it can be used in `Date` object
+3. need to format the `date` string input so it can be used in `Date` object for sorting
 
 **Test 12** - default value of `date` is empty string in `Withdraw` and `Deposit`
 
