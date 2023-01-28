@@ -1,8 +1,8 @@
 export default class Withdraw {
 	// properties
 	#debit;
-	#dateString;
 	#date;
+	#dateObject;
 
 	// constructor
 	constructor(debit, dateString = '') {
@@ -12,9 +12,9 @@ export default class Withdraw {
 		} else {
 			this.#debit = debit.toFixed(2);
 		}
-		this.#dateString = dateString.replace(/-/g, '/');
+		this.#date = dateString.replace(/-/g, '/');
 		const splitDate = dateString.split('-');
-		this.#date = new Date(splitDate[2], splitDate[1] - 1, splitDate[0]);
+		this.#dateObject = new Date(splitDate[2], splitDate[1] - 1, splitDate[0]);
 	}
 
 	// methods
@@ -22,11 +22,11 @@ export default class Withdraw {
 		return this.#debit;
 	}
 
-	getDateString() {
-		return this.#dateString;
-	}
-
 	getDate() {
 		return this.#date;
+	}
+
+	getDateObject() {
+		return this.#dateObject;
 	}
 }

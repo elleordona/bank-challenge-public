@@ -23,7 +23,7 @@ describe('Testing the Withdraw Class', () => {
 			const testWithdraw = new Withdraw(500);
 
 			// Act
-			const result = testWithdraw.getDateString();
+			const result = testWithdraw.getDate();
 
 			//
 			expect(result).toBe('');
@@ -36,7 +36,7 @@ describe('Testing the Withdraw Class', () => {
 			const testWithdraw = new Withdraw(500, dateString);
 
 			// Act
-			const result = testWithdraw.getDateString();
+			const result = testWithdraw.getDate();
 
 			// Assert
 			expect(result).toBe('10/01/2012');
@@ -49,7 +49,7 @@ describe('Testing the Withdraw Class', () => {
 			const testWithdraw = new Withdraw(500, dateString);
 
 			// Act
-			const result = testWithdraw.getDate();
+			const result = testWithdraw.getDateObject();
 
 			// Assert
 			expect(result).toBeInstanceOf(Date);

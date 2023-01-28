@@ -23,7 +23,7 @@ describe('Testing Deposit Class', () => {
 			const testDeposit = new Deposit(1000);
 
 			// Act
-			const result = testDeposit.getDateString();
+			const result = testDeposit.getDate();
 
 			// Arrange
 			expect(result).toBe(''); // if no input then it should default to empty string
@@ -36,7 +36,7 @@ describe('Testing Deposit Class', () => {
 			const testDeposit = new Deposit(1000, dateString);
 
 			// Act
-			const result = testDeposit.getDateString();
+			const result = testDeposit.getDate();
 
 			// Assert
 			expect(result).toBe('10/01/2012');
@@ -49,7 +49,7 @@ describe('Testing Deposit Class', () => {
 			const testDeposit = new Deposit(500, dateString);
 
 			// Act
-			const result = testDeposit.getDate();
+			const result = testDeposit.getDateObject();
 
 			// Assert
 			expect(result).toBeInstanceOf(Date);

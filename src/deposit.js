@@ -1,8 +1,8 @@
 export default class Deposit {
 	// properties
 	#credit;
-	#dateString;
 	#date;
+	#dateObject;
 
 	// constructor
 	constructor(credit, dateString = '') {
@@ -12,9 +12,9 @@ export default class Deposit {
 		} else {
 			this.#credit = credit.toFixed(2);
 		}
-		this.#dateString = dateString.replace(/-/g, '/');
+		this.#date = dateString.replace(/-/g, '/');
 		const splitDate = dateString.split('-');
-		this.#date = new Date(splitDate[2], splitDate[1] - 1, splitDate[0]);
+		this.#dateObject = new Date(splitDate[2], splitDate[1] - 1, splitDate[0]);
 	}
 
 	// getters
@@ -22,11 +22,11 @@ export default class Deposit {
 		return this.#credit;
 	}
 
-	getDateString() {
-		return this.#dateString;
-	}
-
 	getDate() {
 		return this.#date;
+	}
+
+	getDateObject() {
+		return this.#dateObject;
 	}
 }

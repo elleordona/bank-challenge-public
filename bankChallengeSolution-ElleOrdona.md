@@ -93,7 +93,7 @@ So I can keep track of my bank account activity
 | Objects  | Properties                               | Messages                   | Output |
 | -------- | ---------------------------------------- | -------------------------- | ------ |
 | Bank     | runningBalance @Integer                  | deposit(@Deposit, @Date)   | @Void  |
-|          | transactions @Array[@deposit, @withdraw] | withdraw(@Withdraw, @Date) |        |
+|          | transactions @Array[@deposit, @withdraw] | withdraw(@Withdraw, @Date) | @Void  |
 | Deposit  | credit @Integer                          | getCredit()                | @Void  |
 |          | date @String                             |                            |        |
 | Withdraw | debit @Integer                           | getDebit()                 | @Void  |
@@ -123,7 +123,18 @@ So I can see the all transactions done in my bank account
 
 ## Domain Model - Part 4
 
-| Objects | Properties | Messages | Output |
-| ------- | ---------- | -------- | ------ |
+| Objects   | Properties                               | Messages                   | Output  |
+| --------- | ---------------------------------------- | -------------------------- | ------- |
+| Bank      | runningBalance @Integer                  | deposit(@Deposit, @Date)   | @Void   |
+|           | transactions @Array[@deposit, @withdraw] | withdraw(@Withdraw, @Date) | @Void   |
+|           |                                          | getTransactions()          | @Void   |
+| Statement |                                          | getStatement(@Bank)        | @String |
 
 ## Tests - Part 4
+
+Initial Thoughts:
+
+1. `Statement` is static
+2. `getStatement` prints the `transactions` in table form
+
+**Test 15** -
