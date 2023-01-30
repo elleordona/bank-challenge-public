@@ -128,7 +128,7 @@ So I can see the all transactions done in my bank account
 | Bank      | runningBalance @Integer                  | deposit(@Deposit, @Date)   | @Void   |
 |           | transactions @Array[@deposit, @withdraw] | withdraw(@Withdraw, @Date) | @Void   |
 |           |                                          | getTransactions()          | @Void   |
-| Statement |                                          | getStatement(@Bank)        | @String |
+| Statement | bank @Bank                               | getStatement(@Bank)        | @String |
 
 ## Tests - Part 4
 
@@ -136,5 +136,10 @@ Initial Thoughts:
 
 1. `Statement` is static
 2. `getStatement` prints the `transactions` in table form
+3. when `Statement` is called it grabs the `transaction` array from `Bank`
 
-**Test 15** -
+**Test 15** - `Statement` runs `getTransactions` from within an object
+
+**Test 16** - `Statement` prints all the `transactions` in table form
+
+**Test 17** - `Statement` sorts `transactions` by `Date`
