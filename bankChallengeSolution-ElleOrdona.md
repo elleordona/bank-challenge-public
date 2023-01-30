@@ -128,7 +128,7 @@ So I can see the all transactions done in my bank account
 | Bank      | runningBalance @Integer                  | deposit(@Deposit, @Date)   | @Void   |
 |           | transactions @Array[@deposit, @withdraw] | withdraw(@Withdraw, @Date) | @Void   |
 |           |                                          | getTransactions()          | @Void   |
-| Statement | bank @Bank                               | getStatement(@Bank)        | @String |
+| Statement | bankTransactions @Bank                   | getStatement(@Bank)        | @String |
 
 ## Tests - Part 4
 
