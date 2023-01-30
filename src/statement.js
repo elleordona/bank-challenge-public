@@ -18,6 +18,6 @@ export default class Statement {
 	static getStatement(bank) {
 		this.#bank = bank;
 		this.#bankTransactions = bank.getTransactions();
-		console.table(this.#bankTransactions);
+		console.table(this.#bankTransactions, ['date', 'credit', 'debit', 'balance']);
 	}
 }

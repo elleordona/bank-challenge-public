@@ -54,9 +54,7 @@ describe('Testing Bank Class', () => {
 			// Arrange
 			const testBank = new Bank();
 			const dummyDeposit = {
-				getCredit: () => {
-					1000;
-				},
+				getCredit: () => 1000,
 				getDate: () => {},
 				getDateObject: () => {},
 			}; // credit set to 1000
@@ -74,9 +72,7 @@ describe('Testing Bank Class', () => {
 			// Arrange
 			const testBank = new Bank();
 			const dummyDeposit = {
-				getCredit: () => {
-					1000;
-				},
+				getCredit: () => 1000,
 				getDate: () => {},
 				getDateObject: () => {},
 			};
@@ -113,9 +109,7 @@ describe('Testing Bank Class', () => {
 			// Arrange
 			const testBank = new Bank();
 			const dummyWithdraw = {
-				getDebit: () => {
-					500;
-				},
+				getDebit: () => 500,
 				getDate: () => {},
 				getDateObject: () => {},
 			};
@@ -132,9 +126,7 @@ describe('Testing Bank Class', () => {
 			// Arrange
 			const testBank = new Bank();
 			const dummyWithdraw = {
-				getDebit: () => {
-					500;
-				},
+				getDebit: () => 500,
 				getDate: () => {},
 				getDateObject: () => {},
 			};

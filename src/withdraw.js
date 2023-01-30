@@ -1,6 +1,5 @@
 export default class Withdraw {
 	// properties
-	#balance;
 	#debit;
 	#date;
 	#dateObject;
@@ -29,14 +28,5 @@ export default class Withdraw {
 
 	getDateObject() {
 		return this.#dateObject;
-	}
-
-	getBalance() {
-		return this.#balance;
-	}
-
-	// setters
-	setBalance(input) {
-		this.#balance = input;
 	}
 }

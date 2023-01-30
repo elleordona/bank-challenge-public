@@ -11,6 +11,6 @@ myBank.deposit(new Deposit(1000, '10-01-2012'));
 myBank.deposit(new Deposit(2000, '12-01-2012'));
 myBank.withdraw(new Withdraw(500, '14-01-2012'));
 
-console.log(myBank.getTransactions());
+// console.log(myBank.getTransactions());
 
 Statement.getStatement(myBank);

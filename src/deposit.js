@@ -1,6 +1,5 @@
 export default class Deposit {
 	// properties
-	#balance;
 	#credit;
 	#date;
 	#dateObject;
@@ -29,14 +28,5 @@ export default class Deposit {
 
 	getDateObject() {
 		return this.#dateObject;
-	}
-
-	getBalance() {
-		return this.#balance;
-	}
-
-	// setters
-	setBalance(input) {
-		this.#balance = input;
 	}
 }
