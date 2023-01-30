@@ -1,5 +1,6 @@
 export default class Withdraw {
 	// properties
+	#balance;
 	#debit;
 	#date;
 	#dateObject;
@@ -10,7 +11,7 @@ export default class Withdraw {
 			console.log('Input Invalid. Debit set to 0');
 			this.#debit = 0;
 		} else {
-			this.#debit = debit.toFixed(2);
+			this.#debit = debit;
 		}
 		this.#date = dateString.replace(/-/g, '/');
 		const splitDate = dateString.split('-');
@@ -28,5 +29,14 @@ export default class Withdraw {
 
 	getDateObject() {
 		return this.#dateObject;
+	}
+
+	getBalance() {
+		return this.#balance;
+	}
+
+	// setters
+	setBalance(input) {
+		this.#balance = input;
 	}
 }

@@ -14,4 +14,10 @@ export default class Statement {
 		this.#bank = bank;
 		this.#bankTransactions = bank.getTransactions();
 	}
+
+	static getStatement(bank) {
+		this.#bank = bank;
+		this.#bankTransactions = bank.getTransactions();
+		console.table(this.#bankTransactions);
+	}
 }

@@ -15,13 +15,25 @@ export default class Bank {
 	// methods
 	deposit(input) {
 		this.#runningBalance += input.getCredit(); // add credit to runningBalance
-		input.balance = this.#runningBalance; // add a balance property to the input (object)
-		this.#transactions.push(input); // add input (object) into transactions array
+		// input.setBalance(this.#runningBalance.toFixed(2)); // add a balance property to the input (object)
+		const obj = {
+			date: input.getDate(),
+			credit: input.getCredit(),
+			balance: this.#runningBalance.toFixed(2),
+			dateObject: input.getDateObject(),
+		}; // get the value of each property
+		this.#transactions.push(obj); // add properties into transactions array
 	}
 
 	withdraw(input) {
 		this.#runningBalance -= input.getDebit(); // take away debit from runningBalance
-		input.balance = this.#runningBalance; // add a balance property to the input (object)
-		this.#transactions.push(input); // add input (object) into transactions array
+		// input.balance = this.#runningBalance.toFixed(2); // add a balance property to the input (object)
+		const obj = {
+			date: input.getDate(),
+			debit: input.getDebit(),
+			balance: this.#runningBalance.toFixed(2),
+			dateObject: input.getDateObject(),
+		};
+		this.#transactions.push(obj); // add input (object) into transactions array
 	}
 }

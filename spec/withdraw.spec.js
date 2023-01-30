@@ -14,7 +14,7 @@ describe('Testing the Withdraw Class', () => {
 			const result = testWithdraw.getDebit();
 
 			// Assert
-			expect(result).toBe('500.00');
+			expect(result).toBe(500);
 		});
 
 		//* TEST 12

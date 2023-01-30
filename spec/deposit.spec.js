@@ -14,7 +14,7 @@ describe('Testing Deposit Class', () => {
 			const result = testDeposit.getCredit();
 
 			// Assert
-			expect(result).toBe('1000.00');
+			expect(result).toBe(1000);
 		});
 
 		//* TEST 12

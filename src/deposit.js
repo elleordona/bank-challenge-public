@@ -1,5 +1,6 @@
 export default class Deposit {
 	// properties
+	#balance;
 	#credit;
 	#date;
 	#dateObject;
@@ -10,7 +11,7 @@ export default class Deposit {
 			console.log('Input Invalid. Credit set to 0');
 			this.#credit = 0;
 		} else {
-			this.#credit = credit.toFixed(2);
+			this.#credit = credit;
 		}
 		this.#date = dateString.replace(/-/g, '/');
 		const splitDate = dateString.split('-');
@@ -28,5 +29,14 @@ export default class Deposit {
 
 	getDateObject() {
 		return this.#dateObject;
+	}
+
+	getBalance() {
+		return this.#balance;
+	}
+
+	// setters
+	setBalance(input) {
+		this.#balance = input;
 	}
 }

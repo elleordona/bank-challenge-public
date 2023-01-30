@@ -30,7 +30,7 @@ describe('Tests for Statement Class', () => {
 			const result = Statement.getStatement(dummyBank);
 
 			// Assert
-			expect(result).toBeDefined();
+			expect(result).toBeInstanceOf(Array);
 		});
 	});
 });

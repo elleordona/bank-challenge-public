@@ -35,7 +35,11 @@ describe('Testing Bank Class', () => {
 		it('should call getCredit from within an object', () => {
 			// Arrange
 			const testBank = new Bank();
-			const dummyDeposit = { getCredit: () => {} }; // dummy deposit
+			const dummyDeposit = {
+				getCredit: () => {},
+				getDate: () => {},
+				getDateObject: () => {},
+			}; // dummy deposit
 			const depositSpy = spyOn(dummyDeposit, 'getCredit'); // spy to keep an eye on getAmount within dummyDeposit
 
 			// Act
@@ -49,7 +53,13 @@ describe('Testing Bank Class', () => {
 		it('should add the credit to the runningBalance', () => {
 			// Arrange
 			const testBank = new Bank();
-			const dummyDeposit = { getCredit: () => 1000 }; // credit set to 1000
+			const dummyDeposit = {
+				getCredit: () => {
+					1000;
+				},
+				getDate: () => {},
+				getDateObject: () => {},
+			}; // credit set to 1000
 
 			// Act
 			testBank.deposit(dummyDeposit);
@@ -63,7 +73,13 @@ describe('Testing Bank Class', () => {
 		it('should add credit and runningBalance into transactions array', () => {
 			// Arrange
 			const testBank = new Bank();
-			const dummyDeposit = { getCredit: () => 1000 };
+			const dummyDeposit = {
+				getCredit: () => {
+					1000;
+				},
+				getDate: () => {},
+				getDateObject: () => {},
+			};
 
 			// Act
 			testBank.deposit(dummyDeposit);
@@ -78,7 +94,11 @@ describe('Testing Bank Class', () => {
 		it('should call getDebit from within an object', () => {
 			// Arrange
 			const testBank = new Bank();
-			const dummyWithdraw = { getDebit: () => {} };
+			const dummyWithdraw = {
+				getDebit: () => {},
+				getDate: () => {},
+				getDateObject: () => {},
+			};
 			const withdrawSpy = spyOn(dummyWithdraw, 'getDebit');
 
 			// Act
@@ -92,7 +112,13 @@ describe('Testing Bank Class', () => {
 		it('should take away debit from the runningBalance', () => {
 			// Arrange
 			const testBank = new Bank();
-			const dummyWithdraw = { getDebit: () => 500 };
+			const dummyWithdraw = {
+				getDebit: () => {
+					500;
+				},
+				getDate: () => {},
+				getDateObject: () => {},
+			};
 
 			// Act
 			testBank.withdraw(dummyWithdraw);
@@ -105,7 +131,13 @@ describe('Testing Bank Class', () => {
 		it('should debit and runningBalance into transactions', () => {
 			// Arrange
 			const testBank = new Bank();
-			const dummyWithdraw = { getDebit: () => 500 };
+			const dummyWithdraw = {
+				getDebit: () => {
+					500;
+				},
+				getDate: () => {},
+				getDateObject: () => {},
+			};
 
 			// Act
 			testBank.withdraw(dummyWithdraw);
