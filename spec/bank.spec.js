@@ -40,7 +40,7 @@ describe('Testing Bank Class', () => {
 				getDate: () => {},
 				getDateObject: () => {},
 			}; // dummy deposit
-			const depositSpy = spyOn(dummyDeposit, 'getCredit'); // spy to keep an eye on getAmount within dummyDeposit
+			const depositSpy = spyOn(dummyDeposit, 'getCredit'); // spy to keep an eye on getCredit within dummyDeposit
 
 			// Act
 			testBank.deposit(dummyDeposit);
