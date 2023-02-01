@@ -17,16 +17,26 @@ describe('Tests for Statement Class', () => {
 			expect(bankSpy).toHaveBeenCalled();
 		});
 
-		// //* TEST 16
-		// it('should print transactions in table form', () => {
-		// 	// Arrange
-		// 	const dummyBank = { getTransactions: () => {} };
+		//* TEST 16
+		it('should print transactions in table form', () => {
+			// Arrange
+			const dummyBank = {
+				getTransactions() {
+					return [
+						{
+							date: '10/01/2012',
+							credit: '1000.00',
+							balance: '1000.00',
+						},
+					];
+				},
+			};
 
-		// 	// Act
-		// 	const result = Statement.getStatement(dummyBank);
+			// Act
+			const result = Statement.getStatement(dummyBank);
 
-		// 	// Assert
-		// 	expect(result); // i don't know what this should be
-		// });
+			// Assert
+			expect(result).toBeUndefined(); // see test for the output
+		});
 	});
 });
