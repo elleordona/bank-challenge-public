@@ -19,7 +19,6 @@ export default class Bank {
 			date: input.getDate(),
 			credit: (input.getCredit() - 0).toFixed(2), // - 0 ensure getCredit is a number
 			balance: this.#runningBalance.toFixed(2),
-			dateObject: input.getDateObject(),
 		}; // get the value of each property
 		this.#transactions.unshift(obj); // add properties into transactions array
 	}
@@ -30,7 +29,6 @@ export default class Bank {
 			date: input.getDate(),
 			debit: (input.getDebit() - 0).toFixed(2), // - 0 ensures getDebit is a number
 			balance: this.#runningBalance.toFixed(2),
-			dateObject: input.getDateObject(),
 		};
 		this.#transactions.unshift(obj); // add input (object) into beginning of the transactions array
 	}

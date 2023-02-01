@@ -142,4 +142,4 @@ Initial Thoughts:
 
 **Test 16** - `Statement` prints all the `transactions` in table form
 
-**Test 17** - `Statement` sorts `transactions` by `Date`
+**Test 17** - `Statement` sorts `transactions` by `Date` (this is done by using unshift instead of push during deposit and withdraw)

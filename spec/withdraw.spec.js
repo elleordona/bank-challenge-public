@@ -43,17 +43,18 @@ describe('Testing the Withdraw Class', () => {
 		});
 
 		//* TEST 14
-		it('should create date into an instance of Date', () => {
-			// Arrange
-			const dateString = '10-01-2012';
-			const testWithdraw = new Withdraw(500, dateString);
+		//! deleted as it function is no longer used
+		// it('should create date into an instance of Date', () => {
+		// 	// Arrange
+		// 	const dateString = '10-01-2012';
+		// 	const testWithdraw = new Withdraw(500, dateString);
 
-			// Act
-			const result = testWithdraw.getDateObject();
+		// 	// Act
+		// 	const result = testWithdraw.getDateObject();
 
-			// Assert
-			expect(result).toBeInstanceOf(Date);
-		});
+		// 	// Assert
+		// 	expect(result).toBeInstanceOf(Date);
+		// });
 	});
 
 	describe('Edge Cases', () => {
