@@ -4,8 +4,6 @@ export default class Statement {
 	static #bankTransactions;
 
 	// methods
-	static getTransactions(bank) {}
-
 	static getStatement(bank) {
 		this.#bank = bank;
 		this.#bankTransactions = bank.getTransactions();
