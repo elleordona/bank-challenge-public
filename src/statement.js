@@ -3,21 +3,12 @@ export default class Statement {
 	static #bank;
 	static #bankTransactions;
 
-	//constructor
-	// constructor(bank) {
-	// 	this.#bank = bank;
-	// 	this.#bankTransactions = bank.getTransactions();
-	// }
-
 	// methods
-	static getTransactions(bank) {
-		this.#bank = bank;
-		this.#bankTransactions = bank.getTransactions();
-	}
+	static getTransactions(bank) {}
 
 	static getStatement(bank) {
 		this.#bank = bank;
 		this.#bankTransactions = bank.getTransactions();
-		console.table(this.#bankTransactions, ['date', 'credit', 'debit', 'balance']);
+		return console.table(this.#bankTransactions, ['date', 'credit', 'debit', 'balance']);
 	}
 }

@@ -11,7 +11,7 @@ describe('Tests for Statement Class', () => {
 			const bankSpy = spyOn(dummyBank, 'getTransactions');
 
 			// Act
-			Statement.getTransactions(dummyBank);
+			Statement.getStatement(dummyBank);
 
 			// Assert
 			expect(bankSpy).toHaveBeenCalled();

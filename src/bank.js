@@ -17,7 +17,7 @@ export default class Bank {
 		this.#runningBalance += input.getCredit(); // add credit to runningBalance
 		const obj = {
 			date: input.getDate(),
-			credit: (input.getCredit() - 0).toFixed(2), // - 0 converts the output of getCredit into a number
+			credit: (input.getCredit() - 0).toFixed(2), // - 0 ensure getCredit is a number
 			balance: this.#runningBalance.toFixed(2),
 			dateObject: input.getDateObject(),
 		}; // get the value of each property
@@ -28,7 +28,7 @@ export default class Bank {
 		this.#runningBalance -= input.getDebit(); // take away debit from runningBalance
 		const obj = {
 			date: input.getDate(),
-			debit: (input.getDebit() - 0).toFixed(2),
+			debit: (input.getDebit() - 0).toFixed(2), // - 0 ensures getDebit is a number
 			balance: this.#runningBalance.toFixed(2),
 			dateObject: input.getDateObject(),
 		};
